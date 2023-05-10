@@ -7,6 +7,7 @@ vodml {
     vodmlDir.set(file("vo-dml"))
     vodslDir.set(file("model"))
     bindingFiles.setFrom(file("vo-dml/TemplateDM-v1.vodml-binding.xml"))
+    outputDocDir.set(layout.projectDirectory.dir("doc/vodml-generated"))
 
 }
 /* uncomment below to run the generation of vodml from vodsl automatically */

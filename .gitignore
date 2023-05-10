@@ -1,3 +1,9 @@
 /.idea/
 /.gradle/
 /build/
+/doc/ivoatexmeta.tex
+/doc/templateDM.aux
+/doc/templateDM.log
+/doc/templateDM.out
+/doc/templateDM.pdf
+/doc/templateDM.toc
