@@ -13,5 +13,15 @@ Steps to use it
    2. edit the content of some files
       1. [settings.gradle.kts](settings.gradle.kts) first line needs editing
       2. [vo-dml/TemplateDM-v1.vodml-binding.xml](vo-dml/TemplateDM-v1.vodml-binding.xml) (or at least the renamed version) should have appropriate file and model names used.
-      3. [doc/TemplateDM.tex](doc/TemplateDM.tex) should have the included description and model diagram names updated.
+      3. [doc/std/TemplateDM.tex](doc/std/TemplateDM.tex) should have the included description and model diagram names updated.
+      4. [mkdocs_template.yml](./mkdocs_template.yml) (note that this should not be renamed) and [doc/site/index.md](./doc/site/index.md) should be customized and extended.
+4. Use the tools ([more detail](https://ivoa.github.io/vo-dml/))
+```
+gradle test
+```
+should build the model and run tests against it.
+```shell
+gradle testSite
+```
+should build the site and make it available at http://localhost:8000
          
