@@ -32,7 +32,7 @@ dependencies {
     implementation("org.slf4j:slf4j-api:1.7.32")
     testRuntimeOnly("ch.qos.logback:logback-classic:1.4.12")
 
-    testImplementation("org.apache.derby:derby:10.15.2.1")
+    testImplementation("org.apache.derby:derby:10.17.1.0")
     testImplementation("org.javastro:jaxbjpa-utils:0.1.2")
     testImplementation("org.javastro:jaxbjpa-utils:0.1.2:test")
 }
