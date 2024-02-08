@@ -1,6 +1,6 @@
 plugins {
     // this plugin provides all the vo-dml functionality
-    id("net.ivoa.vo-dml.vodmltools") version "0.4.2"
+    id("net.ivoa.vo-dml.vodmltools") version "0.4.3"
 }
 
 vodml {
@@ -59,4 +59,10 @@ tasks.register<Exec>("testSite"){
 tasks.register<Exec>("doSite"){
     commandLine("mkdocs", "gh-deploy", "--force")
     dependsOn("makeSiteNav")
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
 }
