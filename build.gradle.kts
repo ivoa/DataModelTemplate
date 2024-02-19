@@ -1,6 +1,6 @@
 plugins {
     // this plugin provides all the vo-dml functionality
-    id("net.ivoa.vo-dml.vodmltools") version "0.4.3"
+    id("net.ivoa.vo-dml.vodmltools") version "0.4.4"
 }
 
 vodml {
@@ -63,6 +63,6 @@ tasks.register<Exec>("doSite"){
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
