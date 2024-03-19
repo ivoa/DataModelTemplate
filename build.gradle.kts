@@ -15,6 +15,9 @@ vodml {
 //tasks.named("vodmlJavaGenerate") {
 //    dependsOn("vodslToVodml")
 //}
+//tasks.named("vodmlSite") {
+//    dependsOn("vodslToVodml")
+//}
 
 
 tasks.test {
