@@ -1,6 +1,6 @@
 plugins {
     // this plugin provides all the vo-dml functionality
-    id("net.ivoa.vo-dml.vodmltools") version "0.4.4"
+    id("net.ivoa.vo-dml.vodmltools") version "0.5.0"
 }
 
 vodml {
@@ -13,6 +13,9 @@ vodml {
 }
 /* uncomment below to run the generation of vodml from vodsl automatically */
 //tasks.named("vodmlJavaGenerate") {
+//    dependsOn("vodslToVodml")
+//}
+//tasks.named("vodmlSchema") {
 //    dependsOn("vodslToVodml")
 //}
 //tasks.named("vodmlSite") {
