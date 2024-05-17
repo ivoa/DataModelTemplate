@@ -1,6 +1,6 @@
 plugins {
     // this plugin provides all the vo-dml functionality
-    id("net.ivoa.vo-dml.vodmltools") version "0.5.0"
+    id("net.ivoa.vo-dml.vodmltools") version "0.5.1"
 }
 
 vodml {
