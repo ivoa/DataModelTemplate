@@ -1,6 +1,6 @@
 plugins {
     // this plugin provides all the vo-dml functionality
-    id("net.ivoa.vo-dml.vodmltools") version "0.5.10"
+    id("net.ivoa.vo-dml.vodmltools") version "0.5.13"
 }
 
 vodml {
@@ -39,8 +39,8 @@ dependencies {
     testRuntimeOnly("ch.qos.logback:logback-classic:1.4.12")
 
     testImplementation("org.apache.derby:derby:10.17.1.0")
-    testImplementation("org.javastro:jaxbjpa-utils:0.1.2")
-    testImplementation("org.javastro:jaxbjpa-utils:0.1.2:test")
+    testImplementation("org.javastro:jaxbjpa-utils:0.2.3")
+    testImplementation("org.javastro:jaxbjpa-utils:0.2.3:test")
 }
 
 
