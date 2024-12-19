@@ -6,7 +6,9 @@ theme:
   name: material
   features:
     - navigation.tabs
-
+    - navigation.instant
+    - content.action.edit
+    - content.tooltips
 markdown_extensions:
   - tables
   - footnotes
