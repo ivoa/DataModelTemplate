@@ -1,0 +1,53 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$id" : "https://ivoa.net/dm/TemplateDM-v1.vo-dml.json",
+  "title" : "TBD",
+  "description" : "",
+  "type" : "object",
+  "properties" : {
+    "MymodelModel" : {
+      "type" : "object",
+      "properties" : {
+        "refs" : {
+          "type" : "object",
+          "properties" : {
+            "$comment" : "placeholder to make commas easier!"
+          },
+          "additionalProperties" : false
+        },
+        "content" : {
+          "type" : "array",
+          "items" : {
+            "anyOf" : [ {
+              "$ref" : "https://ivoa.net/dm/TemplateDM-v1.vo-dml.json#/$defs/Another"
+            } ]
+          },
+          "additionalProperties" : false
+        }
+      },
+      "additionalProperties" : false
+    }
+  },
+  "$defs" : {
+    "$comment" : "placeholder to make commas easier!",
+    "Another" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "att" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "att" ],
+      "additionalProperties" : false
+    }
+  }
+}
