@@ -31,7 +31,7 @@ tasks.test {
 dependencies {
     //all data models will want to depend on the base model at least
 
-    api("org.javastro.ivoa.vo-dml:ivoa-base:1.0.5-SNAPSHOT") //use API if model exposes any of these base types in API
+    api("org.javastro.ivoa.vo-dml:ivoa-base:1.0-SNAPSHOT") //use API if model exposes any of these base types in API
 
     // the dependencies below are related to testing
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
