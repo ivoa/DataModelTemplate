@@ -12,5 +12,5 @@ dependencyResolutionManagement {
             url= uri("https://repo.dev.uksrc.org/repository/maven-snapshots/")
         }
     }
-    }
+
 }
