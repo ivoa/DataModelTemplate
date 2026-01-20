@@ -7,21 +7,19 @@ This is a template project for creating a new Data Model using
 Steps to use it
 ---------------
 1. decide on your DM name!
-2. copy the repository
-3. update the repository to use that name
-   1. rename files to use that name rather than TemplateDM*
-   2. edit the content of some files
-      1. [settings.gradle.kts](settings.gradle.kts) first line needs editing
-      2. [vo-dml/TemplateDM-v1.vodml-binding.xml](vo-dml/TemplateDM-v1.vodml-binding.xml) (or at least the renamed version) should have appropriate file and model names used.
-      3. [doc/std/TemplateDM.tex](doc/std/TemplateDM.tex) should have the included description and model diagram names updated.
-      4. [mkdocs_template.yml](./mkdocs_template.yml) (note that this should not be renamed) and [doc/site/index.md](./doc/site/index.md) should be customized and extended.
-4. Use the tools ([more detail](https://ivoa.github.io/vo-dml/))
+2. copy the repository (in github it can be used as a template on creation)
+3. decide on  model name then run (note that the project name is whatever you called the github project)
+```shell
+./setup.sh
 ```
+4. check that the build works with
+```shell
 gradle test
 ```
-should build the model and run tests against it.
+
+If that goes wrong it should be possible to get back to the original with
+
 ```shell
-gradle testSite
+rm -fr model/* vo-dml/* src/test/java/* ;git restore doc/site/*.md vo-dml/ model/ build.gradle.kts settings.gradle.kts src/test/java/org/ivoa/dm/mymodel/MymodelModelTest.java ReadMe.md mkdocs_template.yml
 ```
-should build the site and make it available at http://localhost:8000
-         
+
