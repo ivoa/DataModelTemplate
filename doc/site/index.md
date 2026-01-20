@@ -1,4 +1,4 @@
-Template Site Home
+TemplateDM Home
 ==================
 
 This will be the home page for the site
