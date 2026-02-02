@@ -14,7 +14,7 @@ jobs:
       - name: Setup dependencies
         run: |
          sudo apt update
-         sudo apt install plantuml
+         sudo apt install graphviz
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
@@ -25,6 +25,15 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+          # see https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands#adding-a-system-path
+      - name: get latest plantuml;
+        run: |
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          curl -L -o plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2026.1/plantuml-1.2026.1.jar
+          echo "java -Djava.awt.headless=true -jar $HOME/.local/bin/plantml.jar $@" >>plantuml
+          chmod +x plantuml
+        working-directory: ./local/bin
+      
 
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
       # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
