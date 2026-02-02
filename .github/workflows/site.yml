@@ -34,16 +34,9 @@ jobs:
         run: |
           echo "$THISDIR/bin" >> "$GITHUB_PATH"
           curl -L -o plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2026.1/plantuml-1.2026.1.jar
-          printf "#/bin/bash\n$JAVA_HOME/bin/java -jar $THISDIR/bin/plantuml.jar \$@\n" >plantuml
+          printf "#!/bin/bash\n$JAVA_HOME/bin/java -jar $THISDIR/bin/plantuml.jar \$@\n" >plantuml
           chmod +x plantuml
         working-directory: ./bin
-      - name: try plantuml
-        uses: coactions/setup-xvfb@v1
-        with:
-          run: |
-             printf "@startuml\nversion\n@enduml\n"> test.puml
-             plantuml test.puml
-      
 
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
       # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
