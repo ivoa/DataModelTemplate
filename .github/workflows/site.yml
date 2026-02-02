@@ -16,7 +16,7 @@ jobs:
       - name: Setup dependencies
         run: |
          sudo apt update
-         sudo apt install graphviz
+         sudo apt install plantuml
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
@@ -38,7 +38,7 @@ jobs:
           chmod +x plantuml
         working-directory: ./bin
       - name: try plantuml
-        run: plantuml -v
+        run: plantuml --version
       
 
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
