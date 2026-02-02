@@ -26,13 +26,15 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           # see https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands#adding-a-system-path
+      - name: make sure bin directory exists
+        run: mkdir -p "$HOME/bin"
       - name: get latest plantuml;
         run: |
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          echo "$HOME/bin" >> "$GITHUB_PATH"
           curl -L -o plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2026.1/plantuml-1.2026.1.jar
-          echo "java -Djava.awt.headless=true -jar $HOME/.local/bin/plantml.jar $@" >>plantuml
+          echo "java -Djava.awt.headless=true -jar $HOME/bin/plantml.jar $@" >>plantuml
           chmod +x plantuml
-        working-directory: ./local/bin
+        working-directory: ./bin
       
 
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
