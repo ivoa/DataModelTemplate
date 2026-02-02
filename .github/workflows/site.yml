@@ -34,11 +34,13 @@ jobs:
         run: |
           echo "$THISDIR/bin" >> "$GITHUB_PATH"
           curl -L -o plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2026.1/plantuml-1.2026.1.jar
-          echo "$JAVA_HOME/bin/java  -jar $THISDIR/bin/plantuml.jar $@" >plantuml
+          echo "$JAVA_HOME/bin/java -Djava.awt.headless=true -jar $THISDIR/bin/plantuml.jar $@" >plantuml
           chmod +x plantuml
         working-directory: ./bin
       - name: try plantuml
-        run: plantuml --version
+        run: |
+          echo "@startuml\nversion\n@enduml"> test.puml
+          plantuml test.puml
       
 
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
