@@ -37,7 +37,13 @@ jobs:
           echo "$JAVA_HOME/bin/java -Djava.awt.headless=true -jar $THISDIR/bin/plantuml.jar $@" >plantuml
           chmod +x plantuml
         working-directory: ./bin
-
+      - name: try plantuml
+        uses: coactions/setup-xvfb@v1
+        with:
+          run: |
+             echo "@startuml\nversion\n@enduml"> test.puml
+             plantuml test.puml
+      
 
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
       # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
