@@ -30,7 +30,8 @@ jobs:
           # see https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands#adding-a-system-path
       - name: make sure bin directory exists
         run: mkdir -p "$THISDIR/bin"
-      - name: get latest plantuml;
+        #need the latest plantuml for entity relation diagrams - the ubuntu packaged one is quite old
+      - name: get latest plantuml
         run: |
           echo "$THISDIR/bin" >> "$GITHUB_PATH"
           curl -L -o plantuml.jar https://github.com/plantuml/plantuml/releases/download/v1.2026.1/plantuml-1.2026.1.jar
@@ -43,6 +44,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      #run with the headless environment explicitly
       - name: create site
         uses: coactions/setup-xvfb@v1
         with:
