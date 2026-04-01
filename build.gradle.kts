@@ -1,6 +1,6 @@
 plugins {
     // this plugin provides all the vo-dml functionality
-    id("net.ivoa.vo-dml.vodmltools") version "0.5.30"
+    id("net.ivoa.vo-dml.vodmltools") version "0.6.1"
  //   id("org.kordamp.gradle.jandex") version "1.1.0"
 }
 
