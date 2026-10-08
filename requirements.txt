@@ -1,2 +1,6 @@
 mkdocs-material==9.5.25
 plantuml-markdown
+Sphinx
+sphinxcontrib-plantuml
+sphinx-diagram-connect
+sphinxcontrib-imagesvg
