@@ -1,0 +1,15 @@
+components:
+  schemas:
+    Another:
+      type: "object"
+      description: ""
+      properties:
+        att:
+          type: "string"
+          description: "describe me"
+        _id:
+          type: "integer"
+          description: "surrogate key"
+      required:
+      - "att"
+      additionalProperties: false
